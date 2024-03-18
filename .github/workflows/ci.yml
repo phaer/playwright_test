@@ -19,4 +19,5 @@ jobs:
 
       - run: nix-shell --run "python test.py chromium"
       - run: nix-shell --run "python test.py firefox"
+      - run: nix-shell --run "ldd \${PLAYWRIGHT_BROWSERS_PATH}/webkit-1983/minibrowser-gtk/bin/MiniBrowser"
       - run: nix-shell --run "python test.py webkit"
